@@ -1,5 +1,5 @@
 # react-project-structure
-react with no meta-framework (e.g. next.js)
+react project structure with no meta-framework (e.g. next.js)
 
 ### Rules
 * avoid early optimization (value code readability over millisecond performance benefits)
