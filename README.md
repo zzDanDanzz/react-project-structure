@@ -1,4 +1,5 @@
 # react-project-structure
+react with no meta-framework (e.g. next.js)
 
 ### Rules
 * avoid early optimization (value code readability over millisecond performance benefits)
@@ -16,7 +17,7 @@ ________________
 ### Files and Folder
 
 
-> For each page we create a folder and sub-folder containing the main export, components, and hooks that belong to that page.
+> Group related code together in dedicated folders for each page, keeping all components, hooks, and utilities nearby
 
 
 * pages/
@@ -34,8 +35,7 @@ ________________
       * example.page.tsx
 
 
-Some components / hooks need to be shared between multiple pages, we place those in the shared folder. 
-
+> For code that is shared across multiple pages, we have the 'shared' folder.
 
 * shared/
    * components/
@@ -48,9 +48,10 @@ Some components / hooks need to be shared between multiple pages, we place those
          * …repeat component structure
 
 
-the project entry file
+> the project entry file
+
 * main.ts
 
 
-routes declaration (can only import the .page.tsx export from pages folder)
+> routes declaration (can only import the .page.tsx export from pages folder)
 * routes.ts
