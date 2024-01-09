@@ -8,6 +8,7 @@ react project structure with no meta-framework (e.g. next.js)
 * use existing tools and libraries instead of reinventing every wheel.
   - choose a component library AND STICK TO IT. (e.g. mantine)
   - choose an icons library AND STICK TO IT. (e.g. tabler icons for react)
+    - avoid adding SVGs to your source code (unless you REALLY HAVE to use a custom svg)
 * get to a stable version of your component, and ONLY THEN consider animations and fancy stuff IF you have the time.
 
 
