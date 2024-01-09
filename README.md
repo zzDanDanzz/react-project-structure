@@ -6,7 +6,9 @@ react project structure with no meta-framework (e.g. next.js)
 * it's ok to repeat code TWICE. don't follow D.R.Y. too early.
 * avoid useEffect unless trying to synchronize react state with an EXTERNAL system. 
 * use existing tools and libraries instead of reinventing every wheel.
-* let prettier / eslint plugins do your formatting and don't override the project's prettier / eslint config. (bonus: enable format-on-save in your editor)
+  - choose a component library AND STICK TO IT. (e.g. mantine)
+  - choose an icons library AND STICK TO IT. (e.g. tabler icons for react)
+* get to a stable version of your component, and ONLY THEN consider animations and fancy stuff IF you have the time.
 
 
 ________________
