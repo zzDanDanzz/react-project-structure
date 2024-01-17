@@ -32,7 +32,7 @@ react project structure with no meta-framework (e.g. next.js)
 > Group related code together in dedicated folders for each page, keeping all components, hooks, and utilities nearby
 
 - pages/
-  - example-page/
+  - {{page-name}}/
     - components/
       - {{component-name}}/
         - {{component-name}}.tsx
