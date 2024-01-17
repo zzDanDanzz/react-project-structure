@@ -26,11 +26,11 @@ ________________
 * pages/
    * example-page/
       * components/
-         * example.component/
-            * example.component.tsx
-            * example.hooks.tsx
+         * {{component-name}}/
+            * {{component-name}}.tsx
+            * hooks/
+              * {{use-hook-name}}.ts
             * example.utils.tsx
-            * example.constants.tsx
             * example.context.tsx
             * etc…
       * hooks/
