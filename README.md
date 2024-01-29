@@ -25,43 +25,61 @@ react project structure with no meta-framework (e.g. next.js)
 
 ### Files and Folder
 
-["React also uses tree structures to manage and model the relationship between components in a React app. These trees are useful tools to understand how data flows through a React app"](https://react.dev/learn/understanding-your-ui-as-a-tree) - so with the project structure below I'm trying to make it easier to understand how data flows.
+- ["React also uses tree structures to manage and model the relationship between components in a React app. These trees are useful tools to understand how data flows through a React app"](https://react.dev/learn/understanding-your-ui-as-a-tree) - so on the one hand, 'nesting' your files to follow the actual react tree structure makes sense ...
+- HOWEVER, too much nesting is also visually complex.
+
+#### Repeatable Structure
+
+think of this as a variable that can be reused.
+
+- hooks/
+  - use-{{hook-name}}.ts
+- context/
+  - {{context-name}}.provider.ts
+  - use-{{context-name}}.provider.ts
+- utils/
+  - {{utility-name}}.ts
 
 #### Pages Folder
 
-> Group related code together in dedicated folders for each page, keeping all components, hooks, and utilities nearby
+1. create a separate folder for each page, with a main export called {{page-name}}.page.tsx
+2. the 'components' folder will contain the components used only in corrosponding page.
+3. the
 
-- pages/
-  - {{page-name}}/
-    - components/
-      - {{component-name}}/
-        - {{component-name}}.tsx
-        - hooks/
-          - use-{{hook-name}}.ts
-        - context/
-          - {{context-name}}.provider.ts
-          - use-{{context-name}}.provider.ts
-        - utils/
-          - {{utility-name}}.ts
-        - etc…
-    - hooks/
-      - use-{{hook-name}}.ts
-    - {{page-name}}.page.tsx
+```
+pages/
+└─ {{page-name}}/
+   ├─ components/
+   │  └─ {{component-name}}.tsx
+   ├─ {{REPEATABLE_STRUCTURE}}
+   └─ {{page-name}}.page.tsx
+```
+
+#### Features Folder
+
+> here, we keep 'features' that are part of a page but have grown so complex that can have their own 'page' structure (but they're not conceptually a page.)
+
+> the features folder follows the same structure as the pages folder except that everywhere you see 'page' or 'pages' you replace it with 'feature' or 'features'.
+
+```
+features/
+└─ {{feature-name}}/
+   ├─ components/
+   │  └─ {{component-name}}.tsx
+   ├─ {{REPEATABLE_STRUCTURE}}
+   └─ {{feature-name}}.feature.tsx
+```
 
 #### Shared Folder
 
-> For code that is shared across multiple pages, we have the 'shared' folder.
+> the shared folder is for code that is shared across multiple pages / features
 
-- shared/
-  - components/
-    - {{component-name}}/
-      - …repeat above component structure
-  - hooks/
-    - use-{{hook-name}}.ts
-  - constants/
-    - e.g. shared urls, config, etc.
-  - utils/
-    - {{utility-name}}.ts
+```
+shared/
+├─ components/
+│  └─ {{component-name}}.tsx
+└─ {{REPEATABLE_STRUCTURE}}
+```
 
 > the project entry file
 
